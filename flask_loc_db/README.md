@@ -13,12 +13,12 @@ Also, if you're completely new to Flask and/or web development in general, it's 
 
 It is a Cookbook, with dish names and corresponding text.
 
-![Flask Cookbook app](/flaskr-app.png)
+![Flask Cookbook app](/imgs/flask_01.png)
 
 ## Changelog
 
 The initial app was copied (9th...) and upgraded Jan 11th, 2025:
-- **09/01/2025**: Added Help page as general and first run help
+- **09/01/2025**: Added Help page as general and first run help. Reorganized models.py to match Model structure requirement of web application development (... and related refactorization)
 - **10/01/2025**: Added explanatory information in code. Set HTML5 compatibility for html pages. Removed useless files and dependencies (useless for my app).
 
 ## Contents
@@ -36,7 +36,7 @@ This tutorial utilizes the following requirements:
 
 Before beginning make sure you have the latest version of [Python 3.12](https://www.python.org/downloads/release/python-3120/) installed, which you can download from [http://www.python.org/download/](http://www.python.org/download/).
 
-> This app uses Python v3.12.0.
+> This app uses Python v3.12.0+.
 
 Along with Python, the following tools are also installed:
 
@@ -95,13 +95,24 @@ http://127.0.0.1:5000
 Copy this URL and paste in a browser and open the link. 
 
 
-Dowloading or clone-ing Git this repository will result in the following files and folders:
+Dowloading or Git clone-ing this repository will result in the following files and folders:
 
 ```sh
 ├── project
 │   ├── __init__.py
 │   ├── app.py
-
+│   ├── flaskr.db
+│   ├── requirements.txt
+│   ├── static
+│	│   ├── main.js
+│	│   ├── style.css
+│   ├── templates
+│	│   ├── index.html
+│	│   ├── login.html
+│	│   ├── search.html
+│	│   ├── help.html
+│   ├── models
+│	│   ├── models.py
 ```
 
 ## First Test, Hello World
@@ -114,7 +125,7 @@ Navigate to the Cookbook project folder and run the software from an IDE or run 
 Then, navigate to [http://localhost:5001/](http://localhost:5001/) in your browser of choice.
 You should see 
 
-![Flask Cookbook app opening page](.\imgs\flask_01.png)
+![Flask Cookbook app opening page](/imgs/flask_01.png)
 
 If you would like to stop the app return to the terminal, kill the local server with 'Ctrl+C'.
 
