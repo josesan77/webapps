@@ -36,7 +36,7 @@ This tutorial utilizes the following requirements:
 
 Before beginning make sure you have the latest version of [Python 3.12](https://www.python.org/downloads/release/python-3120/) installed, which you can download from [http://www.python.org/download/](http://www.python.org/download/).
 
-> This app uses Python v3.12.0+.
+> This app uses Python v3.12.0+. 
 
 Along with Python, the following tools are also installed:
 
