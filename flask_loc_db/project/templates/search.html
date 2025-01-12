@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flaskr</title>
+    <title>CookBook - Flask-Loc-DB</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -13,7 +13,7 @@
   <body>
     <div class="container">
       <br /><br />
-      <h1>Flaskr</h1>
+      <h1>Cookbook Flask-Loc-DB</h1>
       <br /><br />
 
       <a class="btn btn-primary" role="button" href="{{ url_for('index') }}">
@@ -40,7 +40,7 @@
 
       <form action="{{ url_for('search') }}" method="get" class="from-group">
         <dl>
-          <dt>Search:</dt>
+          <dt>Search (partial match, in title or text):</dt>
           <dd>
             <input type="text" name="query" class="form-control col-sm-4" />
           </dd>

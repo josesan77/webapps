@@ -11,16 +11,20 @@ Also, if you're completely new to Flask and/or web development in general, it's 
 
 ## The app
 
-It is a Cookbook, with dish names and corresponding text.
+Note: See Help page (help.html reachable through a link at the bottom of the Start page (index.html)) as general and first run help including functionalities and usage of the app, in addition to this readme.
+
+It is planned to function as a searchable Cookbook, with dish names and corresponding text (ingredients, cooking description,...).
 
 ![Flask Cookbook app](./imgs/flask_01.png)
 
 
 ## Changelog
 
-The initial app was copied (9th...) and upgraded Jan 11th, 2025:
-- **09/01/2025**: Added Help page as general and first run help. Reorganized models.py to match Model structure requirement of web application development (... and related refactorization)
+The initial app was copied (9th...) and upgraded in Jan, 2025:
+- **12/01/2025**: Further explanatory information in code (e.g. functionality of Flash messages). Corrected help.html removing note about Editing (under development) and way of deleting database entries (may be developed the method to become user friendly). Double checked login/logout functionality.
 - **10/01/2025**: Added explanatory information in code. Set HTML5 compatibility for html pages. Removed useless files and dependencies (useless for my app).
+- **09/01/2025**: Added Help page as general and first run help including functionalities and usage of the app. Reorganized models.py to match Model structure requirement of web application development (... and related refactorization)
+
 
 ## Contents
 

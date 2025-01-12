@@ -1,3 +1,4 @@
+# run the app with: python app.py  in terminal, or use the run button in a Python editor (IDE)
 """ Main application and routing logic for Flask app
 fundamentals from: https://github.com/mjhea0/flaskr-tdd/
 and
@@ -27,7 +28,9 @@ Imports SQLAlchemy for database interactions with SQLite database.
 The rest of the file contains the application configuration, 
 route definitions, and database models.
 
-GET and POST Requests
+GET and POST Requests: handled by the SQLAlchemy.
+
+Flash Messages: used to display messages to the user. Appears only once on the loaded page.
 
 LOGIN and LOGOUT
 use admin/admin as the username/password to login.
@@ -91,13 +94,11 @@ def login_required(f):
 
     return decorated_function
 
-
 @app.route("/")
 def index():
     """Searches the database for entries, then displays them."""
     entries = db.session.query(models.Post)
     return render_template("index.html", entries=entries)
-
 
 @app.route("/add", methods=["POST"])
 def add_entry():
@@ -142,14 +143,16 @@ def delete_entry(post_id):
         db.session.query(models.Post).filter_by(id=new_id).delete()
         db.session.commit()
         result = {"status": 1, "message": "Post Deleted"}
-        flash("The entry was deleted.")
+        flash(["The entry post_id: ", str(post_id), "was deleted."])
     except Exception as e:
         result = {"status": 0, "message": repr(e)}
+        flash("error", result)
     return jsonify(result)
 
 @app.route("/search/", methods=["GET"])
 def search():
-    """Displays search form and results."""
+    """Displays search form and results.
+    partial match search, in title or text is defined in search.html"""
     query = request.args.get("query")
     entries = db.session.query(models.Post)
     if query:
@@ -158,7 +161,7 @@ def search():
 
 @app.route("/help")
 def help():
-    """Displays helpful static page."""
+    """Displays a helpful static page."""
     return render_template("help.html")
 
 if __name__ == "__main__":
