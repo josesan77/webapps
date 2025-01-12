@@ -1,5 +1,10 @@
 # run the app with: python app.py  in terminal, or use the run button in a Python editor (IDE)
-""" Main application and routing logic for Flask app
+"""
+This application runs on local server (http://127.0.0.1:5000) and uses SQLite Database server to store posted entries for a Cookbook.
+
+Restarting the app will remember the previously stored entries!
+
+Main application and routing logic for Flask app
 fundamentals from: https://github.com/mjhea0/flaskr-tdd/
 and
 https://github.com/realpython/discover-flask?tab=readme-ov-file
